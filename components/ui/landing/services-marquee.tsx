@@ -30,7 +30,7 @@ export function ServicesMarquee() {
   }, []);
 
   return (
-    <div className="w-full  py-8 overflow-hidden relative bg-gray-300">
+    <div className="w-full py-5 sm:py-8 overflow-hidden relative bg-gray-300">
       {/* Marquee container with gradient fades */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-20  z-10"></div>
@@ -48,10 +48,10 @@ export function ServicesMarquee() {
           {marqueeItems.map((service, index) => (
             <div
               key={index}
-              className="mx-3 flex items-center justify-center gap-3 rounded-xl bg-white p-4 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="mx-2 sm:mx-3 flex items-center justify-center gap-2 sm:gap-3 rounded-xl bg-white p-3 sm:p-4 shadow-md sm:shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               <div className="text-black">{service.icon}</div>
-              <span className="text-base font-semibold text-gray-800">
+              <span className="text-sm sm:text-base font-semibold text-gray-800">
                 {service.name}
               </span>
             </div>

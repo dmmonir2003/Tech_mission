@@ -217,15 +217,15 @@ const services: Service[] = [
 
 // Reusable component for a single service card
 const ServiceCard = ({ service }: { service: Service }) => (
-  <div className="bg-gradient-to-b from-gray-50 to-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 group">
-    <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center shadow-sm mb-6 group-hover:bg-blue-100 transition-colors">
+  <div className="bg-gradient-to-b from-gray-50 to-gray-100 p-5 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 group">
+    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-lg flex items-center justify-center shadow-sm mb-4 sm:mb-6 group-hover:bg-blue-100 transition-colors [&_svg]:h-10 [&_svg]:w-10 sm:[&_svg]:h-[51px] sm:[&_svg]:w-[51px]">
       {service.icon}
     </div>
-    <h3 className="font-lato text-2xl font-semibold text-gray-800 h-16">
+    <h3 className="font-lato text-lg sm:text-2xl font-semibold text-gray-800 min-h-[2.75rem] sm:min-h-[4rem] h-auto">
       {service.title}
     </h3>
-    <div className="w-28 h-1.5 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-full my-4" />
-    <p className="font-raleway text-gray-600 leading-relaxed">
+    <div className="w-20 sm:w-28 h-1.5 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-full my-3 sm:my-4" />
+    <p className="font-raleway text-gray-600 text-sm sm:text-base leading-relaxed">
       {service.description}
     </p>
   </div>
@@ -238,12 +238,12 @@ function ExpertiseService(): JSX.Element {
         backgroundImage: `url(/ourserviceimg.png)`,
         backgroundSize: "cover",
       }}
-      className=" py-16 sm:py-24"
+      className="py-12 sm:py-16 lg:py-24"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
             Services
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
@@ -252,7 +252,7 @@ function ExpertiseService(): JSX.Element {
         </div>
 
         {/* Responsive Grid for Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}

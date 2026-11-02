@@ -93,7 +93,7 @@
 //   }, []);
 
 //   return (
-//     <section className="relative h-screen w-full overflow-hidden bg-white">
+//     <section className="relative min-h-[520px] h-[85vh] md:h-screen w-full overflow-hidden bg-white">
 //       {slides.map((slide, index) => (
 //         <div
 //           key={index}
@@ -119,7 +119,7 @@
 //             }`}
 //           >
 //             <div className="bg-[rgba(235,242,251,0.8)] backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-lg max-w-xl mx-auto md:mx-0">
-//               <div className="flex flex-col gap-8">
+//               <div className="flex flex-col gap-5 md:gap-8">
 //                 <div className="flex flex-col gap-4">
 //                   <h2 className="text-[#072D5B] text-2xl font-semibold font-lato">
 //                     {slide.pretitle}
@@ -223,7 +223,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-white">
+    <section className="relative h-[min(74svh,600px)] min-h-[420px] w-full overflow-hidden bg-white sm:min-h-[520px] sm:h-[85vh] md:h-screen">
       {/* Slide Images Background */}
       {slides.map((slide, index) => (
         <div
@@ -235,7 +235,7 @@ export function Hero() {
           <img
             src={slide.image}
             alt={slide.title}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-[58%_center] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,57,114,0.3)] to-[rgba(36,136,193,0.3)]" />
         </div>
@@ -243,27 +243,29 @@ export function Hero() {
 
       {/* Content - Only render active slide */}
       <div className="absolute inset-0 h-full w-full flex items-end">
-        <div className="w-full md:w-auto p-4 md:p-0">
-          <div className="bg-[rgba(235,242,251,0.8)] backdrop-blur-sm rounded-lg p-2 md:p-5 shadow-lg max-w-xl mx-auto md:mx-0">
-            <div className="flex flex-col gap-8">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-[#072D5B] text-xl font-semibold font-lato">
+        <div className="w-full md:w-auto p-3 sm:p-6 lg:p-8">
+          <div className="bg-[rgba(235,242,251,0.88)] backdrop-blur-md rounded-xl p-4 sm:p-6 md:p-8 shadow-xl max-w-xl mx-auto md:mx-0">
+            <div className="flex flex-col gap-4 sm:gap-5 md:gap-8">
+              <div className="flex flex-col gap-3 sm:gap-4">
+                <h2 className="text-[#072D5B] text-base sm:text-lg md:text-xl font-semibold font-lato">
                   {slides[currentSlide].pretitle}
                 </h2>
-                <h1 className="text-[#16192C] text-2xl md:text-3xl font-bold font-raleway leading-tight">
+                <h1 className="text-[#16192C] text-2xl sm:text-3xl md:text-4xl font-bold font-raleway leading-tight">
                   {slides[currentSlide].title}
                 </h1>
               </div>
-              <div className="flex flex-col sm:flex-row items-center gap-2">
+              <div className="grid grid-cols-2 items-stretch gap-2 sm:flex sm:items-center sm:gap-3">
                 <CustomButton
                   variant="primary"
                   onClick={() => router.push("/services")}
+                  className="w-full sm:w-auto min-h-11 sm:min-h-0 px-2 sm:px-4 text-xs sm:text-sm"
                 >
                   OUR SERVICES
                 </CustomButton>
                 <CustomButton
                   variant="outline"
                   onClick={() => router.push("/quote")}
+                  className="w-full sm:w-auto min-h-11 sm:min-h-0 px-2 sm:px-4 text-xs sm:text-sm"
                 >
                   GET A QUOTE
                 </CustomButton>

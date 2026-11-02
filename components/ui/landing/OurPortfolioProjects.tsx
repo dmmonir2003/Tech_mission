@@ -31,7 +31,7 @@ const FilterButton = ({
   onClick: () => void;
 }) => {
   const baseClasses =
-    "flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 focus:outline-none   hover:cursor-pointer";
+    "flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200 focus:outline-none hover:cursor-pointer";
   const activeClasses =
     "bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white";
   const inactiveClasses = "bg-white text-gray-800  hover:bg-blue-50";
@@ -56,7 +56,7 @@ const PortfolioCard = ({
   category: string;
   imageUrl?: string;
 }) => (
-  <div className="group relative w-full h-[350px] bg-gray-200/50 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+  <div className="group relative w-full h-[240px] sm:h-[300px] md:h-[350px] bg-gray-200/50 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
     {/* <div className="absolute top-2 left-0 bg-white shadow-lg rounded-r-full py-2 px-6 z-10">
       <span className="text-gray-800 text-lg font-semibold tracking-wide">
         <div className="flex items-center gap-1">
@@ -125,12 +125,12 @@ function OurPortfolioProjects() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-[#F2F2F2] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="w-full bg-[#F2F2F2] py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col items-center ">
         {/* Header Section */}
         <div className="text-center mb-10 md:mb-12 lg:mb-16">
           <h1
-            className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway"
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway"
             style={{ fontFamily: "'Raleway', sans-serif" }}
           >
             Explore Our Portfolio
@@ -144,7 +144,7 @@ function OurPortfolioProjects() {
         </div>
 
         {/* Filter Buttons Section */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
           {filters.map((filter) => (
             <FilterButton
               key={filter.name}
@@ -159,7 +159,7 @@ function OurPortfolioProjects() {
         {/* Portfolio Grid Section */}
         <div className="w-full">
           {displayedData.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-4">
               {displayedData.map((item, index) => (
                 <PortfolioCard
                   key={index}

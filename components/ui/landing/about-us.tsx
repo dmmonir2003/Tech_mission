@@ -62,10 +62,10 @@
 //   };
 
 //   return (
-//     <section id="about" className="py-16 lg:py-24 bg-white">
+//     <section id="about" className="py-12 sm:py-16 lg:py-24 bg-white">
 //       <div className="container mx-auto px-4">
 //         {/* Responsive grid: stacks on mobile, two columns on large screens */}
-//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 //           {/* Left Column: Image */}
 //           <div className="flex justify-center lg:justify-start">
 //             {/* <Image
@@ -105,7 +105,7 @@
 //           {/* Right Column: Content */}
 //           <div className="flex flex-col gap-5">
 //             <div className="space-y-3">
-//               <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
+//               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
 //                 {aboutData.title}
 //               </h2>
 //               <h3 className="text-base md:text-lg text-gray-600 max-w-2xl ">
@@ -128,8 +128,8 @@
 //             </div>
 
 //             {/* Call to Action Box */}
-//             <div className="mt-4 p-6 bg-gray-50 rounded-lg flex items-center gap-6 border border-gray-200">
-//               <div className="flex-shrink-0 bg-brand-primary/10 p-4 rounded-full">
+//             <div className="mt-4 p-4 sm:p-6 bg-gray-50 rounded-lg flex flex-col sm:flex-row items-center gap-4 sm:gap-6 border border-gray-200 text-center sm:text-left">
+//               <div className="flex-shrink-0 bg-brand-primary/10 p-3 sm:p-4 rounded-full">
 //                 <svg
 //                   width="70"
 //                   height="71"
@@ -201,9 +201,9 @@ const aboutData = {
 
 export function AboutUs() {
   return (
-    <section id="about" className="py-16 lg:py-24 bg-white">
+    <section id="about" className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column: Video */}
           <div className="flex justify-center lg:justify-start">
             <div className="w-full relative">
@@ -220,7 +220,7 @@ export function AboutUs() {
           {/* Right Column: Content */}
           <div className="flex flex-col gap-5">
             <div className="space-y-3">
-              <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
                 {aboutData.title}
               </h2>
               <h3 className="text-base md:text-lg text-gray-600 max-w-2xl ">
@@ -243,8 +243,8 @@ export function AboutUs() {
             </div>
 
             {/* Call to Action Box */}
-            <div className="mt-4 p-6 bg-gray-50 rounded-lg flex items-center gap-6 border border-gray-200">
-              <div className="flex-shrink-0 bg-brand-primary/10 p-4 rounded-full">
+            <div className="mt-4 p-4 sm:p-6 bg-gray-50 rounded-lg flex flex-col sm:flex-row items-center gap-4 sm:gap-6 border border-gray-200 text-center sm:text-left">
+              <div className="flex-shrink-0 bg-brand-primary/10 p-3 sm:p-4 rounded-full">
                 <svg
                   width="70"
                   height="71"

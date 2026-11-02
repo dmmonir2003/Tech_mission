@@ -110,7 +110,7 @@ function ServicesOffer() {
       <div className="container mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-10 md:mb-12 lg:mb-16">
-          <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
             Services We Offer
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
@@ -158,8 +158,8 @@ function ServicesOffer() {
 
                   return (
                     <div
-                      className="h-full transition-transform duration-700"
-                      style={{ transform: `scale(${scale})` }}
+                      className={`h-full transition-transform duration-500 ${isActive ? "scale-100 md:scale-105" : "scale-95 md:scale-95"}`}
+
                     >
                       <div className="bg-white rounded-xl md:rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full shadow-lg relative">
                         {/* Arrow Button */}
